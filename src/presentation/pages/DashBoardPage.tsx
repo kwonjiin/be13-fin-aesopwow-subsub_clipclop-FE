@@ -9,7 +9,7 @@ export default function DashBoardPage() {
     const { statCards, chartData, isLoading, error } = useDashBoardViewModel();
 
     return (
-        <div className="min-h-screen w-screen bg-primary text-gray-800">
+        <div className="min-h-screen w-screen bg-[#f0f0e5] text-gray-800">
             <Header />
             <main className="flex">
                 <div className="pt-4 pl-4">

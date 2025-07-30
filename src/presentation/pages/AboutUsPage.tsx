@@ -18,7 +18,7 @@ const handleAnimationComplete = () => {
 
 export default function AboutUsPage() {
   return (
-    <div className="min-h-screen w-full bg-primary flex flex-col overflow-x-hidden">
+    <div className="min-h-screen w-full bg-[#f0f0e5] flex flex-col overflow-x-hidden">
       <Header />
 
       <div style={{ width: '100%', height: '500px', position: 'relative' }}>
@@ -39,7 +39,7 @@ export default function AboutUsPage() {
         animateBy="words"
         direction="top"
         onAnimationComplete={handleAnimationComplete}
-        className="blur-text text-7xl font-bold text-center text-white flex justify-center"
+        className="blur-text text-7xl font-bold text-center text-[#9c7866] flex justify-center"
       />
 
       <br />
@@ -61,7 +61,7 @@ export default function AboutUsPage() {
               황금알을 낳는 고객을 위한, <br />
               <SplitText
                 text="다구독 다구독!"
-                className="text-7xl font-bold text-center text-primary"
+                className="text-7xl font-bold text-center text-[#9c7866]"
                 delay={250}
                 duration={0.6}
                 ease="power3.out"
@@ -75,10 +75,10 @@ export default function AboutUsPage() {
               />
             </h2>
             <p className="text-lg leading-relaxed text-black">
-              <br /><br />고객은 단순한 수익원이 아닌, 장기적인 가치를 창출하는 <br /><strong className="text-primary">황금알을 낳는 거위</strong>입니다.<br />
+              <br /><br />고객은 단순한 수익원이 아닌, 장기적인 가치를 창출하는 <br /><strong className="text-[#9c7866]">황금알을 낳는 거위</strong>입니다.<br />
               <br />
               다구독 다구독은 고객 이탈을 최소화하고, <br />기존 구독자를 세심하게 관리함으로써<br />
-              <strong className="text-primary">지속가능한 수익과 고객 락인(Lock-in)</strong>을 실현하는 <br />B2B 구독 관리 플랫폼입니다.
+              <strong className="text-[#9c7866]">지속가능한 수익과 고객 락인(Lock-in)</strong>을 실현하는 <br />B2B 구독 관리 플랫폼입니다.
             </p>
           </div>
           <div className="w-full md:w-1/2">
@@ -90,11 +90,11 @@ export default function AboutUsPage() {
           <div className="w-full md:w-1/2 p-10 flex flex-col justify-center">
             <h2 className="text-3xl font-bold mb-6 text-black">Mission</h2><br />
             <p className="text-lg leading-relaxed text-black">
-              다구독 다구독은 고객을 단순한 유치 대상이 아닌 <strong className="text-primary">장기적인 파트너</strong>로 인식합니다.
+              다구독 다구독은 고객을 단순한 유치 대상이 아닌 <strong className="text-[#9c7866]">장기적인 파트너</strong>로 인식합니다.
               <br /><br />
               우리는 고객 중심의 가치 설계와 경험 최적화를 통해<br />
-              <strong className="text-primary">고객의 이탈을 최소화</strong>하고, 예측 가능한 구독 수익을 창출하며,
-              AI와 데이터 기반 기술을 활용해 <strong className="text-primary">기업의 지속가능한 성장</strong>을 돕습니다.
+              <strong className="text-[#9c7866]">고객의 이탈을 최소화</strong>하고, 예측 가능한 구독 수익을 창출하며,
+              AI와 데이터 기반 기술을 활용해 <strong className="text-[#9c7866]">기업의 지속가능한 성장</strong>을 돕습니다.
             </p>
           </div>
           <div className="w-full md:w-1/2">
@@ -107,7 +107,7 @@ export default function AboutUsPage() {
             <h2 className="text-3xl font-bold mb-10 text-black">Vision</h2><br />
             <div className="text-lg text-center mb-10 text-black">
 
-              <strong className="text-primary">“고객 유지 중심의 구독 관리 패러다임을 선도하는 인텔리전트 플랫폼”</strong>
+              <strong className="text-[#9c7866]">“고객 유지 중심의 구독 관리 패러다임을 선도하는 인텔리전트 플랫폼”</strong>
               <br /><br />
               고객 성공과 수익 안정화를 동시에 이루며, <br />
               업계의 구독 운영 방식에 새로운 기준을 제시합니다.
@@ -124,7 +124,7 @@ export default function AboutUsPage() {
             <div className="space-y-16 text-lg">
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="md:w-1/2">
-                  <h3 className="text-xl font-semibold mb-2 text-primary">AI 분석 기반 전략</h3><br /><br />
+                  <h3 className="text-xl font-semibold mb-2 text-[#9c7866]">AI 분석 기반 전략</h3><br /><br />
                   <div className="list-disc list-inside space-y-1 text-black">
                     <p>생성형 AI 기반 인사이트 자동 추천</p><br />
                     <p>구독자 이탈 징후 예측 및 대응 전략 수립</p><br />
@@ -140,7 +140,7 @@ export default function AboutUsPage() {
                   <img src={lockin} className="w-full h-auto rounded-lg" />
                 </div>
                 <div className="md:w-1/2 order-2 md:order-1">
-                  <h3 className="text-xl font-semibold mb-2 text-primary">고객 락인 전략</h3><br /><br />
+                  <h3 className="text-xl font-semibold mb-2 text-[#9c7866]">고객 락인 전략</h3><br /><br />
                   <div className="list-disc list-inside space-y-1 text-black">
                     <p>워크플로우 설계로 락인 유도</p><br />
                     <p>장기 구독자 맞춤 혜택 제공</p><br />
@@ -150,7 +150,7 @@ export default function AboutUsPage() {
               </div>
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="md:w-1/2 order-2 md:order-1">
-                  <h3 className="text-xl font-semibold mb-2 text-primary">운영 최적화 전략</h3><br /><br />
+                  <h3 className="text-xl font-semibold mb-2 text-[#9c7866]">운영 최적화 전략</h3><br /><br />
                   <div className="list-disc list-inside space-y-1 text-black">
                     <p>다채널 구독 서비스 통합 관리</p><br />
                     <p>자동 결제/해지/갱신 기능</p><br />
@@ -166,7 +166,7 @@ export default function AboutUsPage() {
         </SpotlightCard>
 
         <section className="max-w-screen-xl w-full bg-white shadow-lg rounded-xl p-10">
-          <h2 className="text-3xl font-bold mb-10 text-center text-primary">핵심 가치 (Core Values)</h2><br /><br />
+          <h2 className="text-3xl font-bold mb-10 text-center text-[#9c7866]">핵심 가치 (Core Values)</h2><br /><br />
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 text-lg">
             <div className="md:w-1/2">
               <ul className="list-disc list-inside space-y-4 text-black">

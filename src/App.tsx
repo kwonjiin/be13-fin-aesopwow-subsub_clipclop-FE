@@ -85,9 +85,9 @@ function App() {
                 <Route path="/forgot/password" element={<ForgotPasswordPage />} />
         
                 <Route path="/dash-board" element={
-                    <ProtectedRoute>
+                    // <ProtectedRoute>
                         <DashBoardPage />
-                    </ProtectedRoute>
+                    // </ProtectedRoute>
                 } />
             <Route path="/mypage" element={<MyPage />} />
         

@@ -31,8 +31,8 @@ export function SideMenuButton({ label, to, onClick, isActive }: SideMenuButtonP
     "w-full py-2 px-2 text-sm border border-gray-300 rounded-md font-bold text-center mb-2 transition-colors duration-150";
 
   const activeClass = active
-    ? "bg-orange-400 text-white"
-    : "bg-gray-100 text-black hover:border-blue-400 hover:bg-gray-200";
+    ? "bg-[#9c7866] text-white"
+    : "bg-gray-100 text-black hover:border-[#9c7866] hover:bg-gray-200";
 
   return (
     <button onClick={handleClick} className={`${baseClass} ${activeClass}`}>

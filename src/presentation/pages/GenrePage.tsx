@@ -73,7 +73,7 @@ export default function GenrePage() {
   };
 
   return (
-    <div className="min-h-screen w-screen bg-[#FFA726] text-gray-800">
+    <div className="min-h-screen w-screen bg-[#f0f0e5] text-gray-800">
       <Header />
       <main className="flex">
         {/* 사이드 메뉴 */}

@@ -14,7 +14,7 @@ export function SideMenu({ isLoggedIn }: SideMenuProps) {
       "/dash-board" || location.pathname.startsWith("/dash-board/") || location.pathname === "/");
 
   return (
-    <div className="w-60 bg-white p-4 flex flex-col justify-between shadow-md rounded-lg  mb-20">
+    <div className="w-60 bg-white p-4 flex flex-col justify-between shadow-md rounded-lg  mb-20 border-2 border-[#9f8473]">
       <div>
         <div className="mb-6">
           <h2 className="font-bold text-sm mb-2">Home</h2>
@@ -56,7 +56,7 @@ export function SideMenu({ isLoggedIn }: SideMenuProps) {
 
       <div className="border-t border-gray-300 my-4" />
 
-      <div className="mt-4 bg-orange-500 p-3 rounded-md border border-gray-300">
+      <div className="mt-4 bg-[#9f8473] p-3 rounded-md border border-gray-300">
         <h3 className="text-sm font-bold mb-2">Upgrade to PRO</h3>
         <p className="text-xs mb-3">
           Upgrade to Material Tailwind PRO and get even more components, plugins, advanced features and premium.
