@@ -43,6 +43,7 @@ export const LoginForm = () => {
                     title="Sign In"
                     loading={loading}
                     type="submit"
+                    color="#9c7866"
                 />
             </div>
         </form>

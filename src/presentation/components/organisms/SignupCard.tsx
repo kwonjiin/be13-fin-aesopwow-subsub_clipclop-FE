@@ -58,7 +58,7 @@ export const SignupCard = ({ form, setForm }: Props) => {
   };
 
   return (
-    <div className="bg-white rounded-lg p-7 min-h-[530px] w-80 text-center text-black shadow-md space-y-4">
+    <div className="bg-[#fffff9] rounded-lg p-7 min-h-[530px] w-80 text-center text-black shadow-md space-y-4">
       <SignUpUserInfoForm 
         form={form} 
         setForm={setForm} 

@@ -82,7 +82,7 @@ export const ChangePasswordCard = ({ form, setForm }: Props) => {
   };
 
   return (
-    <div className="bg-white rounded-lg p-7 h-[550px] w-80 text-center text-black shadow-md space-y-4">
+    <div className="bg-[#fffff9] rounded-lg p-7 h-[550px] w-80 text-center text-black shadow-md space-y-4">
       <ForgetPasswordForm
         form={form}
         setForm={setForm}

@@ -22,7 +22,7 @@ export function InputTextBox({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="px-3 py-2 border bg-white border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        className="px-3 py-2 border bg-[#fffff9] border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#9c7866] focus:border-transparent"
       />
     </div>
   );

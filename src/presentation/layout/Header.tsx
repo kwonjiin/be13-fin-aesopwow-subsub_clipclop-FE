@@ -17,7 +17,7 @@ export function Header() {
         <div className="absolute top-4 left-4 z-40 flex items-center">
           <ProjectLogo />
           <span
-            className="text-3xl font-extrabold text-[#6c5d53] rounded-lg"
+            className="text-3xl font-extrabold text-[#786051] rounded-lg"
             style={{
               fontFamily:
                 "Pretendard, 'Noto Sans KR', 'Apple SD Gothic Neo', 'sans-serif'",

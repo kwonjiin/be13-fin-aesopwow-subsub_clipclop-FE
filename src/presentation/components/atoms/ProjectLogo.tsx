@@ -1,5 +1,5 @@
 // @/presentation/components/atoms/ProjectLogo.tsx
-import logo from "@/assets/logo.png"; // 로고 이미지를 여기에 위치시켜 주세요
+import logo from "@/assets/logo.png"; 
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 

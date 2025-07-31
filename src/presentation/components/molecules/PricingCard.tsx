@@ -31,12 +31,12 @@ const PricingCard: React.FC<PricingCardProps> = ({
                 transition-all duration-300
                 ${
                     isSelected
-                        ? 'bg-black text-white scale-110 shadow-2xl z-10'
-                        : 'bg-white text-gray-800 shadow-lg hover:bg-gray-200 hover:text-black hover:shadow-xl'
+                        ? 'bg-[#fffff9] text-black scale-110 shadow-2xl z-10'
+                        : 'bg-[#fffff9] text-gray-800 shadow-lg hover:bg-gray-200 hover:[#a49287] hover:shadow-xl'
                 }`}
         >
             {badge && (
-                <div className="absolute -top-5 -left-5 bg-yellow-300 text-black text-lg font-bold px-5 py-2 rounded-full shadow-xl z-10">
+                <div className="absolute -top-5 -left-5 bg-yellow-300 text-[#786051] text-lg font-bold px-5 py-2 rounded-full shadow-xl z-10">
                     {badge}
                 </div>
             )}
@@ -53,7 +53,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
 
             <ul
                 className={`w-full my-4 list-disc text-base space-y-2 ${
-                    isSelected ? 'text-white' : 'text-gray-800 font-semibold'
+                    isSelected ? 'text-gray-800' : 'text-gray-800 font-semibold'
                 } pl-16 text-left`}
             >
                 {features.map((item, idx) => (

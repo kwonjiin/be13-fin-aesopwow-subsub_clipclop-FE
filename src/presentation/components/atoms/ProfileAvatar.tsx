@@ -59,7 +59,7 @@ const isLoggedIn =
             title="MyPage"
             onClick={() => navigate("/mypage")}
             loading={false}
-            color="orange"
+            color="#9c7866"
             className="w-full min-w-[6rem]"
           />
           <LogoutButton />
@@ -70,14 +70,14 @@ const isLoggedIn =
                 title="Login"
                 onClick={() => navigate("/login")}
                 loading={false}
-                color="orange"
+                color="#9c7866"
                 className="w-full min-w-[6rem]"
               />
               <CustomButton
                 title="Sign up"
                 onClick={() => navigate("/signup")}
                 loading={false}
-                color="orange"
+                color="#9c7866"
                 className="w-full min-w-[6rem]"
               />
             </>

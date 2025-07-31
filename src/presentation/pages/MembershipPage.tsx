@@ -24,19 +24,19 @@ const MembershipPage: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen w-screen bg-orange-400 overflow-x-hidden text-gray-800 flex flex-col">
+        <div className="min-h-screen w-screen bg-[#f0f0e5] overflow-x-hidden text-[#786051] flex flex-col">
             <div className="pt-6">
                 <Header />
             </div>
 
             <div className="flex-grow flex flex-col items-center justify-center px-4 sm:px-8 lg:px-12 py-12">
-                <h1 className="text-white text-4xl font-extrabold mb-8">멤버십 구독 플랜</h1>
+                <h1 className="text-[#9c7866] text-4xl border-[#9c7866] font-extrabold mb-8">멤버십 구독 플랜</h1>
 
                 {/* 월간/연간 버튼 */}
                 <div className="flex justify-center mb-10 space-x-4">
                     <button
                         className={`px-4 py-2 rounded-full font-semibold transition ${
-                            isMonthly ? 'bg-white text-orange-500' : 'bg-orange-300 text-white'
+                            isMonthly ? 'bg-white text-[#786051]' : 'bg-[#786051] text-white'
                         }`}
                         onClick={() => setIsMonthly(true)}
                     >
@@ -44,7 +44,7 @@ const MembershipPage: React.FC = () => {
                     </button>
                     <button
                         className={`px-4 py-2 rounded-full font-semibold transition ${
-                            !isMonthly ? 'bg-white text-orange-500' : 'bg-orange-300 text-white'
+                            !isMonthly ? 'bg-white text-[#786051]' : 'bg-[#786051] text-white'
                         }`}
                         onClick={() => setIsMonthly(false)}
                     >
