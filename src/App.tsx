@@ -16,12 +16,12 @@ import MyPage from "./presentation/pages/MyPage";
 import MembershipPage from "./presentation/pages/MembershipPage";
 import AboutUsPage from "./presentation/pages/AboutUsPage";
 
-import AnalyticsCohortSingleClusterSelectPage from "./presentation/pages/AnalyticsCohortSingleClusterSelectPage";
-import AnalyticsCohortSingleRequireListPage from "./presentation/pages/AnalyticsCohortSingleRequireListPage";
-import AnalyticsCohortSingleCohortResultPage from "./presentation/pages/AnalyticsCohortSingleCohortResultPage";
-import AnalyticsCohortDoubleClusterSelectPage from "./presentation/pages/AnalyticsCohortDoubleClusterSelectPage";
-import AnalyticsCohortDoubleRequireListPage from "./presentation/pages/AnalyticsCohortDoubleRequireListPage";
-import AnalyticsCohortDoubleCohortResultPage from "./presentation/pages/AnalyticsCohortDoubleCohortResultPage";
+import CohoSingleSelectePage from "./presentation/pages/CohoSingleSelectePage";
+import CohoSingleReqListPage from "./presentation/pages/CohoSingleReqListPage";
+import CohoSingleResultPage from "./presentation/pages/CohoSingleResultPage";
+import CohoDoubleSelectPage from "./presentation/pages/CohoDoubleSelectPage";
+import CohoDoubleRequireListPage from "./presentation/pages/CohoDoubleRequireListPage";
+import CohoDoubleResultPage from "./presentation/pages/CohoDoubleResultPage";
 
 import QnaListPage from "./presentation/pages/QnaListPage";
 import QnaWritePage from "./presentation/pages/QnaWritePage";
@@ -36,10 +36,10 @@ import LastLoginPage from "@/presentation/pages/LastLoginPage";
 
 // import AnalyticsShapPage from "./presentation/pages/AnalyticsShapPage";
 // import AnalyticsShapFilterPage from "./presentation/pages/AnalyticsShapFilterPage";
-import AnalysisSubscriptionPage from "./presentation/pages/AnalysisSubscriptionPage";
-import AnalysisWatchTimePage from "./presentation/pages/AnalysisWatchTimePage";
-import AnalysisGenrePage from "./presentation/pages/AnalysisGenrePage";
-import AnalysisLastLoginPage from "./presentation/pages/AnalysisLastLoginPage";
+import SegSubscriptionPage from "./presentation/pages/SegSubscriptionPage";
+import SegWatchTimePage from "./presentation/pages/SegWatchTimePage";
+import SegGenrePage from "./presentation/pages/SegGenrePage";
+import SegLastLoginPage from "./presentation/pages/SegLastLoginPage";
 
 import ErrorPage from "./presentation/pages/ErrorPage";
 
@@ -98,38 +98,38 @@ function App() {
         <Route
           path="/analytics/single/clusterselect"
           element={
-            <ProtectedRoute>
-              <AnalyticsCohortSingleClusterSelectPage />
-            </ProtectedRoute>
+            // <ProtectedRoute>
+              <CohoSingleSelectePage />
+            // </ProtectedRoute>
           }
         />
-        <Route path="/analytics/single/requirelist" element={<AnalyticsCohortSingleRequireListPage />} />
+        <Route path="/analytics/single/requirelist" element={<CohoSingleReqListPage />} />
         <Route
           path="/analytics/single/result"
           element={
-            <ProtectedRoute>
-              <AnalyticsCohortSingleCohortResultPage />
-            </ProtectedRoute>
+            // <ProtectedRoute>
+              <CohoSingleResultPage />
+            // </ProtectedRoute>
           }
         />
 
         <Route
           path="/analytics/double/clusterselect"
           element={
-            <ProtectedRoute>
-              <AnalyticsCohortDoubleClusterSelectPage />
-            </ProtectedRoute>
+            // <ProtectedRoute>
+              <CohoDoubleSelectPage />
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/analytics/double/requirelist"
           element={
-            <ProtectedRoute>
-              <AnalyticsCohortDoubleRequireListPage />
-            </ProtectedRoute>
+            // <ProtectedRoute>
+              <CohoDoubleRequireListPage />
+            // </ProtectedRoute>
           }
         />
-        <Route path="/analytics/double/result" element={<AnalyticsCohortDoubleCohortResultPage />} />
+        <Route path="/analytics/double/result" element={<CohoDoubleResultPage />} />
 
         <Route path="/qna" element={<QnaListPage />} />
         <Route path="/qna/write" element={<QnaWritePage />} />
@@ -143,10 +143,10 @@ function App() {
 
         <Route path="/shap" element={<ErrorPage />} />
         <Route path="/howto" element={<ErrorPage />} />
-        <Route path="/segments/subscription/:s3Key" element={<AnalysisSubscriptionPage />} />
-        <Route path="/segments/watchtime/:s3Key" element={<AnalysisWatchTimePage />} />
-        <Route path="/segments/genre/:s3Key" element={<AnalysisGenrePage />} />
-        <Route path="/segments/lastlogin/:s3Key" element={<AnalysisLastLoginPage  />} />
+        <Route path="/segments/subscription/:s3Key" element={<SegSubscriptionPage />} />
+        <Route path="/segments/watchtime/:s3Key" element={<SegWatchTimePage />} />
+        <Route path="/segments/genre/:s3Key" element={<SegGenrePage />} />
+        <Route path="/segments/lastlogin/:s3Key" element={<SegLastLoginPage  />} />
       </Routes>
     </>
   );

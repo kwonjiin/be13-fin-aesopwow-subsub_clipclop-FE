@@ -91,9 +91,9 @@ export default function GenrePage() {
               className="w-[700px] bg-white rounded-lg shadow flex items-center justify-between px-8 py-6 mt-10 mb-8"
               style={{ marginLeft: '-220px' }}
             >
-              <div className="flex flex-col items-center flex-1 cursor-pointer border-b-4 border-[#FFA726] pb-2">
-                <span className="text-3xl mb-1 text-[#FFA726]">📋</span>
-                <span className="text-[#FFA726] font-semibold text-lg">요청 내역 리스트</span>
+              <div className="flex flex-col items-center flex-1 cursor-pointer border-b-4 border-[#786051] pb-2">
+                <span className="text-3xl mb-1 text-[#786051]">📋</span>
+                <span className="text-[#786051] font-semibold text-lg">요청 내역 리스트</span>
               </div>
               <div className="flex flex-col items-center flex-1 cursor-pointer opacity-60 pb-2">
                 <span className="text-3xl mb-1">📊</span>

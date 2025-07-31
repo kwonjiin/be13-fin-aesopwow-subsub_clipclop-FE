@@ -109,7 +109,7 @@ export default function AnalysisGenrePage() {
   })();
 
   return (
-    <div className="min-h-screen w-screen bg-[#FFA726] text-gray-800">
+    <div className="min-h-screen w-screen bg-[#f0f0e5] text-gray-800">
       <Header />
       <main className="flex">
         {/* 사이드 메뉴 */}
@@ -133,9 +133,9 @@ export default function AnalysisGenrePage() {
                 <span className="text-3xl mb-1">📋</span>
                 <span className="text-gray-400 font-semibold text-lg">요청 내역 리스트</span>
               </div>
-              <div className="flex flex-col items-center flex-1 cursor-pointer border-b-4 border-[#FFA726] pb-2">
-                <span className="text-3xl mb-1 text-[#FFA726]">📊</span>
-                <span className="text-[#FFA726] font-semibold text-lg">분석 결과</span>
+              <div className="flex flex-col items-center flex-1 cursor-pointer border-b-4 border-[#f0f0e5] pb-2">
+                <span className="text-3xl mb-1 text-[#786051]">📊</span>
+                <span className="text-[#786051] font-semibold text-lg">분석 결과</span>
               </div>
             </div>
             {/* 분석 결과 카드만 (좌측 -220px 이동) */}

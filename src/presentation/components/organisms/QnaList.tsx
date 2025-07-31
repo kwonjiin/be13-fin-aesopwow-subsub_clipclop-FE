@@ -28,7 +28,7 @@ export default function QnaList() {
       <div className="flex justify-end mb-6">
         <Link
           to="/qna/write"
-          className="bg-blue-600 text-white text-sm px-4 py-2 rounded hover:bg-blue-700"
+          className="bg-[#786051] text-white text-sm px-4 py-2 rounded hover:bg-[#9c7866] hover:text-white"
         >
           글쓰기
         </Link>
@@ -82,7 +82,7 @@ export default function QnaList() {
             key={pageNum}
             onClick={() => setPage(pageNum)}
             className={`px-3 py-1 border rounded ${
-              pageNum === currentPage ? 'bg-blue-500 text-white' : 'bg-white text-gray-800'
+              pageNum === currentPage ? 'bg-[#786051] text-white' : 'bg-white text-gray-800'
             } hover:bg-blue-100`}
           >
             {pageNum}

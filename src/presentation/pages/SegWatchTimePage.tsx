@@ -7,12 +7,12 @@ import { SideMenu } from "@/presentation/layout/SideMenu";
 import DotWaveLoader from "@/presentation/components/atoms/DotWaveLoader"
 import { PageBreadcrumb } from "../components/molecules/PageBreadcrumb";
 
-type SegmentType = "Basic" | "Standard" | "Premium" | "unknown";
+type SegmentType = "Light User" | "Core User" | "Power User" | "unknown";
 
-export default function AnalysisSubscriptionPage() {
+export default function AnalysisWatchTimePage() {
   const { s3Key } = useParams<{ s3Key: string }>();
-  const [csvRows, setCsvRows] = useState<string[][]>([]);
   const [csvData, setCsvData] = useState<string | null>(null);
+  const [csvRows, setCsvRows] = useState<string[][]>([]);
   const [downloading, setDownloading] = useState(false);
 
   useEffect(() => {
@@ -67,27 +67,44 @@ export default function AnalysisSubscriptionPage() {
     }
   };
 
-  // segment별로 데이터 분류
+  // 세그먼트별로 데이터 분류
   const segmentTables = (() => {
     if (csvRows.length < 2) return null;
     const header = csvRows[0];
-    const segmentIdx = header.indexOf("segment");
-    if (segmentIdx === -1) return null;
+    let segmentIdx = header.indexOf("segment");
+    const watchTimeIdx = header.indexOf("watch_time_hour");
+
+    // segment 컬럼이 없으면 프론트에서 계산
+    let rowsWithSegment: (string[] & { __segment?: SegmentType })[] = csvRows.slice(1).map(row => {
+      if (segmentIdx !== -1) {
+        return Object.assign([], row, { __segment: row[segmentIdx] as SegmentType });
+      } else if (watchTimeIdx !== -1) {
+        const hour = parseFloat(row[watchTimeIdx]);
+        let seg: SegmentType = "unknown";
+        if (!isNaN(hour)) {
+          if (hour < 30) seg = "Light User";
+          else if (hour < 60) seg = "Core User";
+          else seg = "Power User";
+        }
+        return Object.assign([], row, { __segment: seg });
+      } else {
+        return Object.assign([], row, { __segment: "unknown" as SegmentType });
+      }
+    });
 
     const segments: Record<SegmentType, string[][]> = {
-      Basic: [],
-      Standard: [],
-      Premium: [],
+      "Light User": [],
+      "Core User": [],
+      "Power User": [],
       unknown: [],
     };
 
-    csvRows.slice(1).forEach(row => {
-      const seg = (row[segmentIdx] || "unknown") as SegmentType;
-      if (segments[seg]) segments[seg].push(row);
-      else segments["unknown"].push(row);
+    rowsWithSegment.forEach(row => {
+      const seg = row.__segment || "unknown";
+      if (segments[seg]) segments[seg].push(row as string[]);
+      else segments.unknown.push(row as string[]);
     });
 
-    // segment별 표 생성
     return (Object.keys(segments) as SegmentType[]).map(seg => {
       const rows = segments[seg];
       if (rows.length === 0) return null;
@@ -120,7 +137,7 @@ export default function AnalysisSubscriptionPage() {
   })();
 
   return (
-    <div className="min-h-screen w-screen bg-[#FFA726] text-gray-800">
+    <div className="min-h-screen w-screen bg-[#f0f0e5] text-gray-800">
       <Header />
       <main className="flex">
         {/* 사이드 메뉴 */}
@@ -129,10 +146,10 @@ export default function AnalysisSubscriptionPage() {
             <SideMenu isLoggedIn={true}/>
           </div>
         </div>
-        <div className="flex flex-col p-8 flex-grow">
-          <div className="mb-4">
-            <PageBreadcrumb title="구독 유형 기준 세그먼트 분석 결과" />
-          </div>
+          <div className="flex flex-col p-8 flex-grow">
+            <div className="mb-4">
+              <PageBreadcrumb title="누적 시청시간 기준 세그먼트 분석 결과" />
+            </div>
         <div className="flex-1 flex flex-col items-center">
           {/* 메인 콘텐츠 */}
           <div className="flex-1 flex flex-col items-center">
@@ -144,9 +161,9 @@ export default function AnalysisSubscriptionPage() {
                 <span className="text-3xl mb-1">📋</span>
                 <span className="text-gray-400 font-semibold text-lg">요청 내역 리스트</span>
               </div>
-              <div className="flex flex-col items-center flex-1 cursor-pointer border-b-4 border-[#FFA726] pb-2">
-                <span className="text-3xl mb-1 text-[#FFA726]">📊</span>
-                <span className="text-[#FFA726] font-semibold text-lg">분석 결과</span>
+              <div className="flex flex-col items-center flex-1 cursor-pointer border-b-4 border-[#786051] pb-2">
+                <span className="text-3xl mb-1 text-[#786051]">📊</span>
+                <span className="text-[#786051] font-semibold text-lg">분석 결과</span>
               </div>
             </div>
             {/* 분석 결과 카드만 (좌측 -220px 이동) */}

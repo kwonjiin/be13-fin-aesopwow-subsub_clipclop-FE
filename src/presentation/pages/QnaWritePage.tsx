@@ -6,7 +6,7 @@ import QnaForm from "@/presentation/components/organisms/QnaForm";
 
 export default function QnaWritePage() {
   return (
-    <div className="min-h-screen w-screen bg-primary text-gray-800">
+    <div className="min-h-screen w-screen bg-[#f0f0e5] text-gray-800">
       <Header />
       <main className="flex">
         <div className="pt-4 pl-4">
@@ -18,7 +18,7 @@ export default function QnaWritePage() {
         <div className="flex-1 flex flex-col min-h-screen">
           <div className="flex flex-col p-8 flex-grow">
             <div className="mb-4">
-              <PageBreadcrumb title="문의사항 게시판" />
+              <PageBreadcrumb title="" />
             </div>
 
             <div className="w-full mb-6">

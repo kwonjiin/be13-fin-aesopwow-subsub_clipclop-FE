@@ -93,7 +93,7 @@ export default function AnalyticsCohortDoubleCohortResultPage() {
   }, [rawCsv2, parsed2.filename]);
 
   return (
-    <div className="w-screen bg-primary text-gray-800">
+    <div className="w-screen bg-[#f0f0e5] text-gray-800">
       <Header />
       <main className="flex">
         <div className="pt-4 pl-4">

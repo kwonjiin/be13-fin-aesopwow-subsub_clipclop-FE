@@ -33,7 +33,7 @@ export default function AnalyticsCohortDoubleRequireListPage() {
   };
 
   return (
-    <div className="min-h-screen w-screen bg-primary text-gray-800">
+    <div className="min-h-screen w-screen bg-[#f0f0e5] text-gray-800">
       <Header />
       <main className="flex">
         <aside className="pt-4 pl-4">

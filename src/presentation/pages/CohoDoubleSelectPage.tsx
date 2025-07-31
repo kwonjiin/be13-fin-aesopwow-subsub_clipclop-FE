@@ -1,13 +1,12 @@
 import { PageBreadcrumb } from "@/presentation/components/molecules/PageBreadcrumb";
 import { SideMenu } from "@/presentation/layout/SideMenu";
-import { SingleClusterSelectionPanel } from "../components/organisms/SingleClusterSelectionPanel";
+import { DoubleClusterSelectionPanel } from "../components/organisms/DoubleClusterSelectionPanel";
 import { StepProgress } from "@/presentation/components/molecules/StepProgress";
 import { Header } from "@/presentation/layout/Header";
 
 export default function AnalyticsCohortSingleClusterSelectPage() {
   return (
     <div className="min-h-screen w-screen bg-[#f0f0e5] text-gray-800">
-
       <Header />
 
       <main className="flex">
@@ -23,7 +22,7 @@ export default function AnalyticsCohortSingleClusterSelectPage() {
           <div className="flex flex-col p-8 flex-grow">
             {/* PageBreadcrumb 먼저 출력 */}
             <div className="mb-4">
-              <PageBreadcrumb title="단일 코호트 분석" />
+              <PageBreadcrumb title=" " />
             </div>
 
             {/* StepProgress 중앙 정렬 및 하단 간격 조정 */}
@@ -35,12 +34,11 @@ export default function AnalyticsCohortSingleClusterSelectPage() {
 
             {/* 본문 콘텐츠 */}
             <div className="w-full mb-6">
-              <SingleClusterSelectionPanel />
+              <DoubleClusterSelectionPanel />
             </div>
           </div>
         </div>
       </main>
-
     </div>
   );
 }

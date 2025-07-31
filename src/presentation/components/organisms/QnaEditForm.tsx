@@ -76,7 +76,7 @@ export default function QnaEditForm() {
   };
 
   return (
-    <div className="min-h-screen bg-primary flex justify-center items-start py-16 px-4">
+    <div className="min-h-screen bg-[#f0f0e5] flex justify-center items-start py-16 px-4">
       <div className="bg-white w-full max-w-5xl p-10 rounded shadow-md">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-xl font-semibold">문의사항 수정</h2>
@@ -84,7 +84,7 @@ export default function QnaEditForm() {
             <button
               onClick={handleSubmit}
               disabled={isSubmitting}
-              className={`px-4 py-1 rounded text-white ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
+              className={`px-4 py-1 rounded text-white ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#786051] hover:bg-[#9c7866]'
                 }`}
             >
               {isSubmitting ? '수정 중...' : '수정'}

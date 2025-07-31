@@ -22,14 +22,14 @@ export default function QnaForm() {
   };
 
   return (
-    <div className="min-h-screen bg-primary flex justify-center items-start py-16 px-4">
+    <div className="min-h-screen bg-[#f0f0e5] flex justify-center items-start py-16 px-4">
       <div className="bg-white w-full max-w-5xl p-10 rounded shadow-md">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-xl font-semibold">문의사항 작성</h2>
+          <h2 className="text-2xl font-semibold">문의사항 작성</h2><br />
           <div className="space-x-2">
             <button
               onClick={handleSubmit}
-              className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700"
+              className="bg-[#9c7866] text-white px-4 py-1 rounded hover:bg-[#9c7866]"
             >
               등록
             </button>
@@ -41,6 +41,7 @@ export default function QnaForm() {
             </button>
           </div>
         </div>
+        <br />
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="text"

@@ -18,7 +18,7 @@ const steps: StepItem[] = [
 export function StepProgress({ currentStep }: StepProgressProps) {
   return (
     <div className="w-full flex justify-center px-6">
-      <div className="w-full max-w-3xl bg-white rounded-lg shadow p-2 flex justify-between border border-orange-300">
+      <div className="w-full max-w-3xl bg-white rounded-lg shadow p-2 flex justify-between border-2 border-[#9c7866]">
         {steps.map((step, index) => {
           const isActive = currentStep >= index + 1;
 
@@ -26,11 +26,11 @@ export function StepProgress({ currentStep }: StepProgressProps) {
             <div
               key={step.label}
               className={`flex flex-col items-center justify-center w-full py-4 ${
-                isActive ? "text-orange-500" : "text-gray-500"
+                isActive ? "text-[#9c7866]" : "text-gray-500"
               }`}
             >
-              <step.Icon className={`mb-1 ${isActive ? "text-orange-500" : "text-gray-400"}`} />
-              <div className={`text-sm font-semibold ${isActive ? "text-orange-500" : "text-gray-500"}`}>
+              <step.Icon className={`mb-1 ${isActive ? "text-[#9c7866]" : "text-gray-400"}`} />
+              <div className={`text-sm font-semibold ${isActive ? "text-[#9c7866]" : "text-gray-500"}`}>
                 {step.label}
               </div>
             </div>
